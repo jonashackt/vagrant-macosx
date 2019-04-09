@@ -10,6 +10,9 @@ Vagrant.configure("2") do |config|
         :mount_options => ['nolock,vers=3,udp,noatime,actimeo=1,resvport'],
     :export_options => ['async,insecure,no_subtree_check,no_acl,no_root_squash']
 
+     # NFS needs host-only network
+    config.vm.network :private_network, ip: "172.16.2.42"
+
     config.vm.provider :virtualbox do |virtualbox|
         virtualbox.name = "macosx-test"
         virtualbox.memory = 4096
