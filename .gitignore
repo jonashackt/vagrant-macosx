@@ -51,3 +51,8 @@ build-iPhoneSimulator/
 
 #Idea
 *.iml
+
+#Vagrant
+.vagrant
+
+*.log
